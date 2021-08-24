@@ -8,7 +8,7 @@ namespace ReadingDataWithSqlClient.Models
 {
     public class Customer
     {
-        public int Id { get; set; }
+        public int Id { get; set; } //not used when inserting
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string? Country { get; set; }
@@ -26,6 +26,11 @@ namespace ReadingDataWithSqlClient.Models
             this.PhoneNumber = tlf;
             this.Email = email;
         }
+
+        public Customer()
+        {
+        }
+
         public override string ToString()
         {
             return "Customer data: Id: "+ this.Id + " Name: " + this.FirstName + " " + this.LastName + " Country: " + this.Country + " PostCode: " + this.PostalCode + " TLF: " + this.PhoneNumber + " Email: " + this.Email; 
